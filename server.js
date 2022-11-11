@@ -11,7 +11,9 @@ app.use("/static", express.static("public"))
 
 // ROUTES
 app.get('/budgets', (req, res) => {
-    res.send("Hello World")
+    res.render('index.ejs', {
+        budgets
+    })
 })
 
 app.listen(PORT, () => {
