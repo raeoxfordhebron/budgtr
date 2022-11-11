@@ -10,7 +10,17 @@
     <link rel="stylesheet2" href="../public/css/skeleton.css">
 </head>
 <body>
-    <div class="container"></div>
-    <h1>Hello Adult Life</h1>
+    <div class="container">
+    <h1>Budgtr</h1>
+    <table>
+        <tr>
+            <% for(let i = 0; i < budgets.length; i++) { %>
+                <td><%= budgets[i].date %></td>
+                <td><a href=""><%= budgets[i].name %></a></td>
+                <td><%= budgets[i].amount %></td>   
+           <% } %>
+        </tr>
+    </table>
+    </div>
 </body>
 </html>
