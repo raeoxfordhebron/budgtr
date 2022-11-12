@@ -11,11 +11,17 @@
 </head>
 <body>
     <div class="container">
-        <h1><%= budget.name %></h1>
+        <h1>Show Line Item</h1>
         <a href="/budgets"><button>Back to Index</button></a>
-        <p><%= budget.from %></p>
-        <p><%= budget.amount %></p>
-        <p><%= budget.tags %></p>
+        date: <%= budget.date %>
+        <br>
+        name: <%= budget.name %>
+        <br>
+        from: <%= budget.from %>
+        <br>
+        amount: <%= budget.amount %>
+        <br>
+        tags: <%= budget.tags %>
     </div>
 </body>
 </html>

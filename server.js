@@ -8,6 +8,7 @@ const budgets = require('./models/budget.js')
 
 // MIDDLEWARE
 app.use("/static", express.static("public"))
+app.use(express.urlencoded({extended: true}))
 
 // ROUTES
 // Get Route
@@ -15,6 +16,19 @@ app.get('/budgets', (req, res) => {
     res.render('index.ejs', {
         budgets
     })
+})
+
+// New Route
+app.get('/budgets/new', (req, res) => {
+    res.render("new.ejs")
+})
+
+// Create Route
+app.post('/budgets', (req, res) =>{
+    Number(req.body.amount)
+    budgets.push(req.body)
+    res.redirect("/budgets")
+    
 })
 
 // Show Route
