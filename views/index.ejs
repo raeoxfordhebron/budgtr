@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../public/css/normalize.css">
+    <link rel="stylesheet" href="../public/css/skeleton.css">
     <link rel="stylesheet" href="../public/styles.css">
-    <link rel="stylesheet1" href="../public/css/normalize.css">
-    <link rel="stylesheet2" href="../public/css/skeleton.css">
 </head>
 <body>
     <div class="container">
@@ -16,7 +16,7 @@
         <tr>
             <% for(let i = 0; i < budgets.length; i++) { %>
                 <td><%= budgets[i].date %></td>
-                <td><a href=""><%= budgets[i].name %></a></td>
+                <td><a href="/budgets/<%= i %>"><%= budgets[i].name %></a></td>
                 <td><%= budgets[i].amount %></td>   
            <% } %>
         </tr>
