@@ -13,6 +13,12 @@
     <div class="container">
     <h1>Budgtr</h1>
     <a href="/budgets/new">Create New Line Item</a>
+    <% let sum = 0 %>
+    <% for(let i = 0; i < budgets.length; i++) { %>
+        <% sum += parseInt(budgets[i].amount) %>
+    <%  } %>
+    <% console.log(sum) %>
+    Bank Account: <%= sum %>
     <table>
         <tr>
             <% for(let i = 0; i < budgets.length; i++) { %>

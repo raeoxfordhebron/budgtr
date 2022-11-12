@@ -36,7 +36,7 @@ budgets = [
     },
     {
       date: "April 5",
-      name: "Monthy Birthday Money from Aunt Tilda",
+      name: "Monthly Birthday Money from Aunt Tilda",
       from: "Aunt Tilda",
       amount: 20,
       tags: ["Aunt Tilda is the best"]

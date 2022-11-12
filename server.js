@@ -1,20 +1,22 @@
 // DEPENDENCIES
 const express = require('express')
 const app = express()
-const PORT = 3001
+const PORT = 3000
 
 // DATABASE
 const budgets = require('./models/budget.js')
+let bankAccount 
 
 // MIDDLEWARE
 app.use("/static", express.static("public"))
 app.use(express.urlencoded({extended: true}))
 
 // ROUTES
-// Get Route
+// Index Route
 app.get('/budgets', (req, res) => {
     res.render('index.ejs', {
-        budgets
+        budgets,
+        bankAccount
     })
 })
 
