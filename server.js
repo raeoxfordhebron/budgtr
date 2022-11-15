@@ -2,6 +2,7 @@
 const express = require('express')
 const app = express()
 const PORT = 3000
+const morgan = require('morgan')
 
 // DATABASE
 const budgets = require('./models/budget.js')
@@ -10,6 +11,7 @@ let bankAccount
 // MIDDLEWARE
 app.use("/static", express.static("public"))
 app.use(express.urlencoded({extended: true}))
+app.use(morgan("tiny"))
 
 // ROUTES
 // Index Route

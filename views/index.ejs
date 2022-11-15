@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../public/css/normalize.css">
-    <link rel="stylesheet" href="../public/css/skeleton.css">
-    <link rel="stylesheet" href="../public/styles.css">
+    <link rel="stylesheet" href="/static/normalize.css">
+    <link rel="stylesheet" href="/static/skeleton.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -17,8 +17,23 @@
     <% for(let i = 0; i < budgets.length; i++) { %>
         <% sum += parseInt(budgets[i].amount) %>
     <%  } %>
-    <% console.log(sum) %>
+    
     Bank Account: <%= sum %>
+    
+    <% if(sum < 0) { %>
+        <style>
+            body {
+                background-color: red;
+            }
+        </style>
+    <% } %>
+    <% if(sum > 1000) { %>0
+        <style>
+            body {
+                background-color: blue;
+            }
+        </style>
+    <% } %>
     <table>
         <tr>
             <% for(let i = 0; i < budgets.length; i++) { %>
